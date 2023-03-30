@@ -126,7 +126,7 @@ figure(1)
 ima(testDigits(:,:,71))
 
 figure(2)
-op = reshape(medel(:,9),16,16)
+op = reshape(medel(:,9),16,16);
 ima(op)
 
 

@@ -42,4 +42,4 @@ procent(:,3) = (procent(:,1)./(procent(:,1)+(procent(:,2)))).*100;
 
 
 figure(1)
-ima(testDigits(:,:,29))
+ima(testDigits(:,:,54))
