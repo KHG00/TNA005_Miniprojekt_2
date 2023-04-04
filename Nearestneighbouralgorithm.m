@@ -1,4 +1,5 @@
-function [resultat,booool] = Nearestneighbouralgorithm(TrD,TeD,TrA,TeA)
+function [booool] = Nearestneighbouralgorithm(TrD,TeD,TrA,TeA)
+
 
 %Beräkna avstånd mellan okänd siffra resp. vektor
 %============================================================
@@ -14,7 +15,7 @@ end
 %============================================================
 
 [~,resultat] = min(langd(:));
-resultat = TrA(resultat)-1;
+resultat = TrA(resultat);
 
 booool = 1;
 if resultat ~= TeA
