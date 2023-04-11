@@ -7,7 +7,7 @@ Medel = centroidmethodalgorithm(trainDigits,trainAns);
 
 %%
 clc
-clf
+clear figure
 
 antal = 2007;
 
@@ -25,43 +25,17 @@ end
 resultatCentroid = classificationResult(centroid);
 resultNeighbour = classificationResult(neighbour);
 
-
-%Grafen
-figure(1);
-
+title("Percent Correct Classification");
 hold on; grid on;
-title("Correct Classification Percentage",'FontSize',20);
 
+figure(1);
 axis([-0.99 9.99 65 100]);
 
-stem(0:9,resultNeighbour(:,3),'r','filled')
-stem(0:9,resultatCentroid(:,3),'b','filled');
+stem(0:9,resultNeighbour(:,3),'lb','filled')
+stem(0:9,resultatCentroid(:,3),'y','filled');
 
-legend("Nearest Neighbour Method","Centroid Method",'FontSize',15,'Location','southeast');
+legend("Nearest Neighbour Method","Centroid Method",'FontSize',15, 'Location','southeast');
 hold off;
-
-%%
-%Testbilder
-clc
-clf
-
-centroidmethodalgorithmtest(Medel,testDigits(:,:,13),testAns(13));
-Nearestneighbouralgorithm(trainDigits,testDigits(:,:,13),trainAns,testAns(13));
-
-
-figure(2);
-
-ima(testDigits(:,:,13));
-
-test21 = reshape(Medel(:,13),16,16);
-
-ima(test21)
-
-
-
-
-
-
 
 
 
